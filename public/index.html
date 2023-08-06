@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- login form -->
+    <div class="form-container" id="login-form">
+
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="login-email">Email<span class="required">*</span></label>
+        <input type="email" id="login-email" required>
+        <span class="error" id="login-email-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="login-password">Password<span class="required">*</span></label>
+        <input type="password" id="login-password" required>
+        <span class="error" id="login-password-error"></span>
+      </div>
+
+      <button onclick="login()">Login</button>
+
+      <div class="signup-link">
+        First time here? <a href="#" onclick="showSignupForm()">Signup</a>
+      </div>
+
+      <div class="success-message" id="login-success"></div>
+    </div>
+
+    <!-- signup form -->
+    <div class="form-container" id="signup-form" style="display: none;">
+      <h2>Signup</h2>
+      <div class="form-group">
+        <label for="signup-firstname">First Name<span class="required">*</span></label>
+        <input type="text" id="signup-firstname" required>
+        <span class="error" id="signup-firstname-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="signup-lastname">Last Name<span class="required">*</span></label>
+        <input type="text" id="signup-lastname" required>
+        <span class="error" id="signup-lastname-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="signup-email">Email<span class="required">*</span></label>
+        <input type="email" id="signup-email" required>
+        <span class="error" id="signup-email-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="signup-password">Password<span class="required">*</span></label>
+        <input type="password" id="signup-password" required>
+        <span class="error" id="signup-password-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="signup-confirm-password">Confirm Password<span class="required">*</span></label>
+        <input type="password" id="signup-confirm-password" required>
+        <span class="error" id="signup-confirm-password-error"></span>
+      </div>
+
+      <button onclick="signup()">Signup</button>
+
+      <div class="login-link">
+        Already registered? <a href="#" onclick="showLoginForm()">Login</a>
+      </div>
+
+      <div class="success-message" id="signup-success"></div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
